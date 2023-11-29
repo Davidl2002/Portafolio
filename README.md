@@ -10,9 +10,19 @@ Este repositorio contiene el código fuente de mi portafolio en línea, el cual 
 - **CSS3:** Implementado para el diseño y estilo de la interfaz.
 - **GitHub Pages:** La página está alojada y se puede acceder a través de GitHub Pages.
 
+<p align="center">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html">
+</p>
+
 ## Capturas de Pantalla
 
-
+<p align="center">
+        <img src="./image/Captura de pantalla 2023-11-29 154705.png" alt="">
+        <img src="./image/Captura de pantalla 2023-11-29 154755.png" alt="">
+        <img src="./image/Captura de pantalla 2023-11-29 154808.png" alt="">
+        <img src="./image/Captura de pantalla 2023-11-29 154823.png" alt="">
+    </p>
 
 ## Instrucciones de Uso
 

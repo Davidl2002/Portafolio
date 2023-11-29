@@ -28,7 +28,7 @@ Este repositorio contiene el código fuente de mi portafolio en línea, el cual 
 
 1. **Clonar el Repositorio:**
    ```bash
-   git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+   git clone (https://github.com/Davidl2002/Portafolio.git)
 2. **Abrir el Archivo HTML:**
    Abre el archivo `index.html` en tu navegador web para visualizar el portafolio.
 

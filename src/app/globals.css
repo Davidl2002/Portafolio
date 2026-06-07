@@ -1,0 +1,89 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-950 text-white font-sans antialiased;
+  background: linear-gradient(135deg, #0a0e27 0%, #0f1629 100%);
+  overflow-x: hidden;
+}
+
+/* Estilos para scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-500;
+}
+
+/* Glassmorphism utility */
+.glass-effect {
+  @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-lg;
+}
+
+.glass-effect-lg {
+  @apply backdrop-blur-lg bg-white/5 border border-white/10;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #a78bfa 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient borders */
+.border-gradient {
+  position: relative;
+  background: linear-gradient(#0a0e27, #0a0e27) padding-box;
+  border: 1px solid transparent;
+  border-image: linear-gradient(135deg, #0ea5e9, #8b5cf6) 1;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3), 
+              inset 0 0 20px rgba(6, 182, 212, 0.1);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3),
+              inset 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.3),
+              inset 0 0 20px rgba(14, 165, 233, 0.1);
+}

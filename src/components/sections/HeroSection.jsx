@@ -125,6 +125,8 @@ export default function HeroSection() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
+        </motion.div>
+
         {/* Stack de tecnologías */}
         <motion.div
           variants={itemVariants}

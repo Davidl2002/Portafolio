@@ -47,6 +47,12 @@ body {
   @apply bg-black border border-dark-800;
 }
 
+/* Stroke text utility for giant background typography */
+.text-stroke {
+  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.4); /* Made much more visible */
+  color: transparent;
+}
+
 /* Gradient text removed, replaced with solid color for compatibility */
 .gradient-text {
   @apply text-white;

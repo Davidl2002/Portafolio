@@ -41,7 +41,7 @@ const titleVariants = {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Fondo 3D */}
       <HeroScene />
 

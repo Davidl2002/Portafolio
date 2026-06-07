@@ -54,8 +54,8 @@ const cardVariants = {
 
 export default function SkillsSection() {
   return (
-    <section className="relative py-20 px-4 bg-black border-t border-dark-800" id="skills">
-      <div className="container mx-auto max-w-6xl">
+    <section className="relative py-20 px-4 border-t border-dark-800 overflow-hidden" id="skills">
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

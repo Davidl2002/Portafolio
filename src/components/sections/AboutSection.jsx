@@ -24,8 +24,8 @@ const itemVariants = {
 
 export default function AboutSection() {
   return (
-    <section className="relative py-20 px-4 bg-black" id="about">
-      <div className="container mx-auto max-w-5xl">
+    <section className="relative py-20 px-4 overflow-hidden" id="about">
+      <div className="container mx-auto max-w-5xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

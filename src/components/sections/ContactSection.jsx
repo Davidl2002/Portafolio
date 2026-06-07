@@ -79,8 +79,8 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="relative py-20 px-4 bg-black border-t border-dark-800" id="contact">
-      <div className="container mx-auto max-w-4xl">
+    <section className="relative py-20 px-4 border-t border-dark-800 overflow-hidden" id="contact">
+      <div className="container mx-auto max-w-4xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

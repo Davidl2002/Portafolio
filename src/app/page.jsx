@@ -8,6 +8,7 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Spotlight from '@/components/Spotlight';
 
 export default function Home() {
   useEffect(() => {
@@ -16,7 +17,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark-950 text-white">
+    <div className="min-h-screen bg-black text-white relative">
+      <Spotlight />
+      
       <Navigation />
       
       {/* Hero Section */}

@@ -125,29 +125,6 @@ export default function HeroSection() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
-          {/* Botón principal */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-white rounded-none font-bold uppercase tracking-wider
-                       text-black hover:bg-pop-500 hover:text-white transition-all duration-300
-                       relative overflow-hidden group"
-          >
-            <span className="relative z-10">Ver mis proyectos</span>
-          </motion.button>
-
-          {/* Botón secundario */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-transparent rounded-none font-bold uppercase tracking-wider
-                       text-white border-2 border-dark-800 hover:border-pop-500 hover:text-pop-500
-                       transition-all duration-300"
-          >
-            Contactame
-          </motion.button>
-        </motion.div>
-
         {/* Stack de tecnologías */}
         <motion.div
           variants={itemVariants}

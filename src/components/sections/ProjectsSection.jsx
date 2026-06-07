@@ -11,7 +11,6 @@ const projectsData = [
     tags: ['JavaScript', 'PostgreSQL'],
     github: 'https://github.com/Davidl2002/Buses_Front',
     featured: true,
-    color: 'from-cyan-500 to-blue-500',
   },
   {
     id: 2,
@@ -20,7 +19,6 @@ const projectsData = [
     tags: ['TypeScript', 'HTML', 'CSS'],
     github: 'https://github.com/Davidl2002/Fronted_Barberia',
     featured: false,
-    color: 'from-purple-500 to-pink-500',
   },
   {
     id: 3,
@@ -29,7 +27,6 @@ const projectsData = [
     tags: ['JavaScript', 'HTML', 'CSS', 'TypeScript'],
     github: 'https://github.com/Davidl2002/front_seguros_medicos',
     featured: false,
-    color: 'from-green-500 to-emerald-500',
   },
 ];
 
@@ -54,7 +51,7 @@ const cardVariants = {
 
 export default function ProjectsSection() {
   return (
-    <section className="relative py-20 px-4" id="projects">
+    <section className="relative py-20 px-4 bg-black border-t border-dark-800" id="projects">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,10 +60,10 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Proyectos Destacados</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight text-white">
+            Proyectos <span className="text-pop-500">Destacados</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" />
+          <div className="w-20 h-1 bg-pop-500" />
         </motion.div>
 
         {/* Proyecto destacado */}
@@ -77,39 +74,32 @@ export default function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            whileHover={{ boxShadow: '0 30px 60px rgba(14, 165, 233, 0.2)' }}
-            className="glass-effect p-8 rounded-xl border-2 border-gradient overflow-hidden h-full"
+            className="bg-black p-8 border-2 border-dark-800 hover:border-pop-500 transition-colors duration-300 h-full group"
           >
-            <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${projectsData[0].color} opacity-10 blur-3xl`} />
-
             <div className="relative z-10">
-              <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-accent-500/20 to-primary-500/20 
-                            border border-accent-500/30 mb-4">
-                <span className="text-xs font-semibold text-accent-400">Proyecto Principal</span>
+              <div className="inline-block px-3 py-1 bg-pop-500 mb-6">
+                <span className="text-xs font-bold text-white uppercase tracking-widest">Proyecto Principal</span>
               </div>
 
-              <h3 className="text-3xl font-bold mb-3 text-white">{projectsData[0].title}</h3>
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">{projectsData[0].description}</p>
+              <h3 className="text-3xl font-bold mb-3 text-white group-hover:text-pop-500 transition-colors">{projectsData[0].title}</h3>
+              <p className="text-gray-400 mb-6 text-lg leading-relaxed">{projectsData[0].description}</p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-8">
                 {projectsData[0].tags.map((tag, idx) => (
-                  <motion.span
+                  <span
                     key={idx}
-                    whileHover={{ scale: 1.05 }}
-                    className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${projectsData[0].color} 
-                             bg-opacity-20 border border-white/20 text-white`}
+                    className="px-3 py-1 text-xs font-semibold bg-dark-900 border border-dark-700 text-gray-300 uppercase"
                   >
                     {tag}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
 
               <motion.a
                 href={projectsData[0].github}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600
-                          text-white font-semibold hover:shadow-lg transition-all"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-block px-8 py-4 bg-white text-black font-bold uppercase tracking-wider hover:bg-pop-500 hover:text-white transition-all"
               >
                 Ver en GitHub →
               </motion.a>
@@ -119,51 +109,47 @@ export default function ProjectsSection() {
         )}
 
         {/* Grid de otros proyectos */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectsData.slice(1).map((project) => (
-            <TiltCard key={project.id}>
             <motion.div
-              variants={cardVariants}
-              whileHover={{ y: -5, boxShadow: '0 20px 40px rgba(14, 165, 233, 0.15)' }}
-              className="glass-effect p-6 rounded-xl group hover:border-primary-500/50 transition-all h-full"
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="h-full"
             >
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.color} 
-                            opacity-0 group-hover:opacity-10 blur-2xl transition-opacity`} />
+              <TiltCard className="h-full">
+                <div className="bg-black p-6 border border-dark-800 hover:border-pop-500 transition-all duration-300 h-full flex flex-col relative group">
+                  
+                  <h3 className="text-xl font-bold mb-4 text-white group-hover:text-pop-500 transition-colors relative z-10">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-6 leading-relaxed relative z-10 flex-grow">{project.description}</p>
 
-              <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary-400 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-gray-400 text-sm mb-4 leading-relaxed">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-6 relative z-10">
+                    {project.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 text-xs bg-dark-900 border border-dark-700 text-gray-400 uppercase"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="px-2 py-1 text-xs rounded-full bg-white/5 border border-white/10 text-gray-300"
+                  <a
+                    href={project.github}
+                    className="inline-flex items-center text-white font-bold hover:text-pop-500 transition-colors relative z-10 mt-auto uppercase text-sm tracking-wider"
                   >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <motion.a
-                href={project.github}
-                whileHover={{ x: 5 }}
-                className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
-              >
-                <span className="text-sm font-semibold">Ver proyecto</span>
-                <span className="ml-2">→</span>
-              </motion.a>
+                    <span>Ver proyecto</span>
+                    <span className="ml-2 transition-transform group-hover:translate-x-1 text-pop-500">→</span>
+                  </a>
+                </div>
+              </TiltCard>
             </motion.div>
-            </TiltCard>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

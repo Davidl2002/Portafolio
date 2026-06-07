@@ -1,5 +1,4 @@
 import './globals.css';
-import CustomCursor from '@/components/CustomCursor';
 
 export const metadata = {
   title: 'David Lopez - Portafolio',
@@ -15,7 +14,6 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#0a0e27" />
       </head>
       <body className="bg-dark-950">
-        <CustomCursor />
         {children}
       </body>
     </html>

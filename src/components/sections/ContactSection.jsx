@@ -79,7 +79,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="relative py-20 px-4" id="contact">
+    <section className="relative py-20 px-4 bg-black border-t border-dark-800" id="contact">
       <div className="container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -88,8 +88,8 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">¿Hablamos?</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight text-white">
+            ¿<span className="text-pop-500">Hablamos?</span>
           </h2>
           <p className="text-gray-400 text-lg">
             Estoy siempre abierto a nuevas oportunidades y colaboraciones. Contactame directamente.
@@ -104,11 +104,11 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="glass-effect p-8 rounded-xl"
+            className="bg-black border border-dark-800 p-8"
           >
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">
                   Nombre
                 </label>
                 <input
@@ -117,15 +117,15 @@ export default function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 
-                           text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none
-                           transition-colors"
+                  className="w-full px-4 py-3 bg-dark-900 border border-dark-700 
+                           text-white placeholder-gray-500 focus:border-pop-500 focus:outline-none
+                           transition-colors rounded-none"
                   placeholder="Tu nombre"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">
                   Email
                 </label>
                 <input
@@ -134,15 +134,15 @@ export default function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 
-                           text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none
-                           transition-colors"
+                  className="w-full px-4 py-3 bg-dark-900 border border-dark-700 
+                           text-white placeholder-gray-500 focus:border-pop-500 focus:outline-none
+                           transition-colors rounded-none"
                   placeholder="tu@email.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">
                   Asunto
                 </label>
                 <input
@@ -151,15 +151,15 @@ export default function ContactSection() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 
-                           text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none
-                           transition-colors"
+                  className="w-full px-4 py-3 bg-dark-900 border border-dark-700 
+                           text-white placeholder-gray-500 focus:border-pop-500 focus:outline-none
+                           transition-colors rounded-none"
                   placeholder="Asunto del mensaje"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">
                   Mensaje
                 </label>
                 <textarea
@@ -168,9 +168,9 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 
-                           text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none
-                           transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-dark-900 border border-dark-700 
+                           text-white placeholder-gray-500 focus:border-pop-500 focus:outline-none
+                           transition-colors resize-none rounded-none"
                   placeholder="Tu mensaje aquí..."
                 />
               </div>
@@ -179,7 +179,7 @@ export default function ContactSection() {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-3 rounded-lg bg-red-500/20 border border-red-500/50 text-red-400 text-sm"
+                  className="p-3 bg-red-900 border border-red-500 text-red-100 text-sm font-bold"
                 >
                   {error}
                 </motion.div>
@@ -189,14 +189,14 @@ export default function ContactSection() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600
-                         text-white font-semibold hover:shadow-lg transition-all relative overflow-hidden"
+                className="w-full px-6 py-4 bg-white text-black font-bold uppercase tracking-wider
+                         hover:bg-pop-500 hover:text-white transition-all duration-300 rounded-none border border-white"
               >
                 {submitted ? (
                   <motion.span
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="text-green-400"
+                    className="text-pop-500"
                   >
                     ✓ Mensaje enviado
                   </motion.span>
@@ -215,34 +215,34 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="flex flex-col justify-center space-y-6"
           >
-            <div className="glass-effect p-6 rounded-xl">
-              <h3 className="text-xl font-bold mb-4 text-white">Conecta conmigo</h3>
+            <div className="bg-black border border-dark-800 p-6">
+              <h3 className="text-xl font-bold mb-4 text-white uppercase tracking-wider">Conecta conmigo</h3>
               <div className="space-y-3">
                 {contactLinks.map((link, idx) => (
                   <motion.a
                     key={idx}
                     href={link.url}
                     whileHover={{ x: 10 }}
-                    className="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 
+                    className="flex items-center gap-4 p-3 border border-transparent hover:border-dark-700 bg-dark-900 
                              transition-colors group"
                   >
-                    <span className="text-2xl">{link.icon}</span>
-                    <span className="text-gray-300 group-hover:text-primary-400 transition-colors">
+                    <span className="text-2xl grayscale group-hover:grayscale-0 transition-all">{link.icon}</span>
+                    <span className="text-gray-300 group-hover:text-pop-500 font-bold uppercase text-sm tracking-wider transition-colors">
                       {link.name}
                     </span>
-                    <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    <span className="ml-auto text-dark-500 group-hover:text-pop-500 transition-colors">→</span>
                   </motion.a>
                 ))}
               </div>
             </div>
 
-            <div className="glass-effect p-6 rounded-xl">
-              <h3 className="text-lg font-bold mb-2 text-white">Ubicación</h3>
+            <div className="bg-black border border-dark-800 p-6">
+              <h3 className="text-lg font-bold mb-2 text-white uppercase tracking-wider">Ubicación</h3>
               <p className="text-gray-400">Ambato, Ecuador 🇪🇨</p>
             </div>
 
-            <div className="glass-effect p-6 rounded-xl">
-              <h3 className="text-lg font-bold mb-2 text-white">Disponibilidad</h3>
+            <div className="bg-black border border-dark-800 p-6">
+              <h3 className="text-lg font-bold mb-2 text-white uppercase tracking-wider">Disponibilidad</h3>
               <p className="text-gray-400">Disponible para proyectos y colaboraciones</p>
             </div>
           </motion.div>

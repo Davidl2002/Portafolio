@@ -19,40 +19,11 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-          950: '#0a0e27',
+          950: '#000000', // Pure black for stark monochrome
         },
-        primary: {
-          50: '#f0f9ff',
-          500: '#0ea5e9',
-          600: '#1cd44d',
-          700: '#0369a1',
-        },
-        accent: {
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-        },
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'glass': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
-      },
-      backdropFilter: {
-        glass: 'blur(10px)',
-      },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'pulse-glow': {
-          '0%, 100%': { opacity: 1 },
-          '50%': { opacity: 0.5 },
+        pop: {
+          500: '#ff4500', // Vibrant Orange / OrangeRed
+          600: '#e03e00',
         },
       },
     },

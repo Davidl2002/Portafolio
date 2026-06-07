@@ -39,10 +39,10 @@ export default function Navigation() {
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2 cursor-pointer"
         >
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
-            <span className="text-white font-bold text-lg">ED</span>
+          <div className="w-10 h-10 rounded-lg bg-pop-500 flex items-center justify-center">
+            <span className="text-white font-bold text-lg">DL</span>
           </div>
-          <span className="font-bold text-xl gradient-text hidden sm:inline">Esteban</span>
+          <span className="font-bold text-xl text-white hidden sm:inline">Esteban</span>
         </motion.div>
 
         {/* Desktop Navigation */}
@@ -51,8 +51,8 @@ export default function Navigation() {
             <motion.a
               key={idx}
               href={item.href}
-              whileHover={{ scale: 1.05, color: '#0ea5e9' }}
-              className="px-4 py-2 rounded-lg text-gray-300 hover:text-primary-400 transition-colors"
+              whileHover={{ scale: 1.05, color: '#ff4500' }}
+              className="px-4 py-2 rounded-lg text-gray-400 hover:text-pop-500 transition-colors"
             >
               {item.label}
             </motion.a>
@@ -64,8 +64,8 @@ export default function Navigation() {
           href="#contact"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="hidden md:block px-6 py-2 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600
-                   text-white font-semibold hover:shadow-lg transition-all"
+          className="hidden md:block px-6 py-2 rounded-lg bg-white
+                   text-black font-semibold hover:bg-pop-500 hover:text-white transition-all"
         >
           Contactame
         </motion.a>
@@ -97,13 +97,13 @@ export default function Navigation() {
         transition={{ duration: 0.3 }}
         className="md:hidden overflow-hidden"
       >
-        <div className="container mx-auto px-4 py-4 border-t border-white/10 flex flex-col gap-2">
+        <div className="container mx-auto px-4 py-4 border-t border-dark-800 flex flex-col gap-2">
           {navItems.map((item, idx) => (
             <motion.a
               key={idx}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="px-4 py-2 rounded-lg text-gray-300 hover:text-primary-400 transition-colors"
+              className="px-4 py-2 rounded-lg text-gray-400 hover:text-pop-500 transition-colors"
             >
               {item.label}
             </motion.a>
@@ -111,8 +111,8 @@ export default function Navigation() {
           <motion.a
             href="#contact"
             onClick={() => setIsOpen(false)}
-            className="px-4 py-2 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600
-                     text-white font-semibold mt-2"
+            className="px-4 py-2 rounded-lg bg-white
+                     text-black font-semibold mt-2 hover:bg-pop-500 hover:text-white"
           >
             Contactame
           </motion.a>

@@ -24,7 +24,7 @@ const itemVariants = {
 
 export default function AboutSection() {
   return (
-    <section className="relative py-20 px-4" id="about">
+    <section className="relative py-20 px-4 bg-black" id="about">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,10 +33,10 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Sobre mí</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight text-white">
+            Sobre <span className="text-pop-500">mí</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" />
+          <div className="w-20 h-1 bg-pop-500" />
         </motion.div>
 
         <motion.div
@@ -48,10 +48,10 @@ export default function AboutSection() {
         >
           <motion.div
             variants={itemVariants}
-            className="glass-effect p-8 rounded-xl"
+            className="bg-black border border-dark-800 p-8 hover:border-pop-500 transition-colors duration-300"
           >
             <p className="text-gray-300 leading-relaxed mb-4">
-              Soy Esteban David Lopez Nuñez, estudiante de Ingeniería de Software en la Universidad Técnica de Ambato, 
+              Soy Esteban David Lopez Nuñez, Ingeniero de Software, 
               con pasión por crear interfaces modernas, intuitivas y accesibles.
             </p>
             <p className="text-gray-300 leading-relaxed mb-4">
@@ -77,9 +77,9 @@ export default function AboutSection() {
               <motion.div
                 key={idx}
                 whileHover={{ x: 10 }}
-                className="p-4 glass-effect rounded-lg hover:border-primary-500/50 transition-colors"
+                className="p-4 bg-black border border-dark-800 hover:border-pop-500 transition-colors group"
               >
-                <h3 className="text-primary-400 font-semibold mb-1">{item.title}</h3>
+                <h3 className="text-white group-hover:text-pop-500 font-bold mb-1 uppercase tracking-wide transition-colors">{item.title}</h3>
                 <p className="text-gray-400">{item.desc}</p>
               </motion.div>
             ))}

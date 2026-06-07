@@ -7,32 +7,26 @@ const skillsData = [
   {
     category: 'Frontend',
     skills: ['React', 'Next.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
-    color: 'from-blue-500 to-cyan-500',
   },
   {
     category: 'Estilos & Diseño',
     skills: ['Tailwind CSS', 'Responsive Design', 'CSS Grid', 'Flexbox', 'Figma', 'Prototipos'],
-    color: 'from-purple-500 to-pink-500',
   },
   {
     category: 'Experiencia de Usuario',
     skills: ['UI/UX Design', 'Wireframing', 'Accesibilidad', 'Usabilidad', 'Animaciones', 'Micro-interacciones'],
-    color: 'from-green-500 to-emerald-500',
   },
   {
     category: 'Backend & APIs',
     skills: ['Node.js', 'REST APIs', 'Express', 'SQL', 'PostgreSQL', 'Autenticación'],
-    color: 'from-orange-500 to-red-500',
   },
   {
     category: 'Herramientas & Control',
     skills: ['Git & GitHub', 'NPM', 'VS Code', 'DevTools', 'Testing', 'Debugging'],
-    color: 'from-indigo-500 to-blue-500',
   },
   {
     category: 'Conceptos Clave',
     skills: ['Clean Code', 'Componentes Reutilizables', 'SEO', 'Performance', 'Versionado', 'Metodologías Ágiles'],
-    color: 'from-cyan-500 to-blue-500',
   },
 ];
 
@@ -55,13 +49,12 @@ const cardVariants = {
   },
   hover: {
     y: -10,
-    boxShadow: '0 20px 40px rgba(14, 165, 233, 0.2)',
   },
 };
 
 export default function SkillsSection() {
   return (
-    <section className="relative py-20 px-4" id="skills">
+    <section className="relative py-20 px-4 bg-black border-t border-dark-800" id="skills">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,10 +63,10 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Habilidades & Tecnologías</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight text-white">
+            Habilidades & <span className="text-pop-500">Tecnologías</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" />
+          <div className="w-20 h-1 bg-pop-500" />
         </motion.div>
 
         <motion.div
@@ -88,10 +81,10 @@ export default function SkillsSection() {
             <motion.div
               variants={cardVariants}
               whileHover="hover"
-              className="glass-effect p-6 rounded-xl hover:border-primary-500/50 transition-all h-full"
+              className="bg-black border border-dark-800 p-6 hover:border-pop-500 transition-colors duration-300 h-full group"
             >
-              <div className={`mb-4 p-3 rounded-lg bg-gradient-to-r ${category.color} w-fit`}>
-                <h3 className="font-bold text-white text-sm">{category.category}</h3>
+              <div className="mb-6 border-b border-dark-800 pb-2 group-hover:border-pop-500 transition-colors">
+                <h3 className="font-bold text-white text-lg uppercase tracking-wide">{category.category}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -99,8 +92,8 @@ export default function SkillsSection() {
                   <motion.span
                     key={skillIdx}
                     whileHover={{ scale: 1.05 }}
-                    className="px-3 py-1 text-xs rounded-full bg-white/5 border border-white/20
-                             text-gray-300 hover:border-primary-400 transition-colors"
+                    className="px-3 py-1 text-xs bg-dark-900 border border-dark-700
+                             text-gray-300 hover:border-pop-500 hover:text-pop-500 transition-colors uppercase"
                   >
                     {skill}
                   </motion.span>

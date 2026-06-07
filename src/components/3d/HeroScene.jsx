@@ -18,7 +18,7 @@ function FloatingGeometries() {
       ],
       scale: Math.random() * 0.8 + 0.2,
       rotation: [Math.random() * Math.PI, Math.random() * Math.PI, 0],
-      color: i % 3 === 0 ? '#0ea5e9' : i % 3 === 1 ? '#8b5cf6' : '#14b8a6', // Primary, Accent, Teal
+      color: i % 3 === 0 ? '#ffffff' : i % 3 === 1 ? '#888888' : '#ff4500', // White, Gray, Pop Orange
       type: i % 2 === 0 ? 'box' : 'icosahedron'
     }));
   }, []);
@@ -94,8 +94,8 @@ export default function HeroScene() {
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={45} />
         <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={1} color="#0ea5e9" />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8b5cf6" />
+        <pointLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff4500" />
         
         <Stars radius={50} depth={50} count={3000} factor={4} saturation={0} fade speed={1} />
         

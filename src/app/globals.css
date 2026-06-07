@@ -1,0 +1,83 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-black text-white font-sans antialiased;
+  overflow-x: hidden;
+}
+
+/* Estilos para scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-pop-500;
+}
+
+/* Monochrome Utility Classes */
+.glass-effect {
+  @apply bg-black border border-dark-800 transition-colors duration-300;
+}
+
+.glass-effect:hover {
+  @apply border-pop-500;
+}
+
+.glass-effect-lg {
+  @apply bg-black border border-dark-800;
+}
+
+/* Stroke text utility for giant background typography */
+.text-stroke {
+  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.4); /* Made much more visible */
+  color: transparent;
+}
+
+/* Gradient text removed, replaced with solid color for compatibility */
+.gradient-text {
+  @apply text-white;
+}
+
+.gradient-text-accent {
+  @apply text-pop-500;
+}
+
+/* Animated gradient borders removed, replaced with sharp pop color border */
+.border-gradient {
+  @apply border border-dark-800;
+}
+
+.border-gradient:hover {
+  @apply border-pop-500;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Glow effects replaced with stark shadows */
+.glow-cyan, .glow-purple, .glow-blue {
+  box-shadow: none;
+}
+

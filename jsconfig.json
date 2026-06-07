@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@sections/*": ["./src/components/sections/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@public/*": ["./public/*"]
+    }
+  }
+}

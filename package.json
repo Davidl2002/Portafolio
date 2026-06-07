@@ -1,0 +1,30 @@
+{
+  "name": "portafolio-esteban-lopez",
+  "version": "1.0.0",
+  "description": "Portafolio web interactivo con animaciones y efectos 3D - Esteban David Lopez Nuñez",
+  "author": "Esteban David Lopez Nuñez",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@react-three/drei": "^9.99.3",
+    "@react-three/fiber": "^8.15.16",
+    "autoprefixer": "^10.4.18",
+    "framer-motion": "^10.16.16",
+    "next": "^14.1.4",
+    "postcss": "^8.4.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.1",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.1.4"
+  }
+}

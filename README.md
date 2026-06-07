@@ -1,50 +1,155 @@
-# Portafolio de Esteban David Lopez Nuñez
+# 🎨 Portafolio Interactivo - Esteban David Lopez Nuñez
 
-## Descripción del Proyecto
+Portafolio web moderno, interactivo y altamente animado. Construido con **Next.js**, **React**, **Tailwind CSS** y **Framer Motion**.
 
-Este repositorio contiene el código fuente de mi portafolio en línea, el cual utiliza tecnologías web para mostrar información sobre mí, mi educación y proporcionar medios de contacto. La página está diseñada de manera sencilla y accesible.
+## ✨ Características
 
-## Tecnologías Utilizadas
+- ✅ **Diseño Oscuro Minimalista** con estética glassmorphism
+- ✅ **Animaciones Fluidas** usando Framer Motion
+- ✅ **Fondo Dinámico** con partículas interactivas
+- ✅ **Responsive Design** optimizado para todos los dispositivos
+- ✅ **Secciones Completas**: Hero, Sobre mí, Habilidades, Proyectos, Contacto
+- ✅ **UI/UX Profesional** con transiciones suaves
+- ✅ **Performance Optimizado** con Next.js
 
-- **HTML5:** Se utiliza para la estructura y contenido de la página.
-- **CSS3:** Implementado para el diseño y estilo de la interfaz.
-- **GitHub Pages:** La página está alojada y se puede acceder a través de GitHub Pages.
+## 🚀 Quick Start
 
-<p align="center">
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html">
-</p>
+### Requisitos Previos
+- Node.js 16+ 
+- npm o yarn
 
-## Capturas de Pantalla
+### Instalación
 
-<p align="center">
-        <img src="./image/Captura de pantalla 2023-11-29 154705.png" alt="">
-        <img src="./image/Captura de pantalla 2023-11-29 154755.png" alt="">
-        <img src="./image/Captura de pantalla 2023-11-29 154808.png" alt="">
-        <img src="./image/Captura de pantalla 2023-11-29 154823.png" alt="">
-    </p>
+```bash
+# Clonar o descargar el proyecto
+cd portafolio
 
-## Instrucciones de Uso
+# Instalar dependencias
+npm install
+# o
+yarn install
 
-1. **Clonar el Repositorio:**
-   ```bash
-   git clone https://github.com/Davidl2002/Portafolio.git
-2. **Abrir el Archivo HTML:**
-   Abre el archivo `index.html` en tu navegador web para visualizar el portafolio.
+# Ejecutar servidor de desarrollo
+npm run dev
+# o
+yarn dev
+```
 
-3. **Personalizar Contenido:**
-   Siéntete libre de personalizar el contenido en cada sección del HTML según tu información.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-4. **Modificar Estilos:**
-   Si deseas cambiar el estilo, puedes editar el archivo `style.css` en la carpeta `css`.
+## 📁 Estructura del Proyecto
 
-5. **Contribuciones:**
-   ¡Las contribuciones son bienvenidas! Si encuentras errores, mejoras o tienes sugerencias, no dudes en abrir un issue o enviar un pull request.
+```
+portafolio/
+├── src/
+│   ├── app/
+│   │   ├── layout.jsx        # Layout principal
+│   │   ├── page.jsx          # Página de inicio
+│   │   └── globals.css       # Estilos globales
+│   ├── components/
+│   │   ├── Navigation.jsx    # Barra de navegación
+│   │   ├── Footer.jsx        # Pie de página
+│   │   └── sections/
+│   │       ├── HeroSection.jsx       # Sección hero con partículas
+│   │       ├── AboutSection.jsx      # Sobre mí
+│   │       ├── SkillsSection.jsx     # Habilidades y tecnologías
+│   │       ├── ProjectsSection.jsx   # Proyectos destacados
+│   │       └── ContactSection.jsx    # Formulario de contacto
+│   └── utils/                # Utilidades
+├── public/                   # Activos estáticos
+├── package.json
+├── next.config.js
+├── tailwind.config.js
+├── postcss.config.js
+└── jsconfig.json            # Alias de rutas
+```
 
-6. **Contacto:**
-   Si quieres contactarme para discutir el proyecto o cualquier otro tema, puedes hacerlo a través de:
-   - **Correo Electrónico:** elopez5023@uta.edu.ec
-   - **Celular:** 0979049511
+## 🎨 Stack Tecnológico
 
-¡Gracias por visitar mi portafolio en línea! Espero que encuentres la información interesante.
+| Categoría | Tecnología |
+|-----------|-----------|
+| **Framework** | Next.js 14+ |
+| **UI Library** | React 18+ |
+| **Estilos** | Tailwind CSS 3 |
+| **Animaciones** | Framer Motion 10 |
+| **Lenguaje** | JavaScript / JSX |
 
+## ⚙️ Configuración
+
+### Tailwind CSS
+Los colores principales están definidos en `tailwind.config.js`:
+- **Primary**: Azul (#0ea5e9)
+- **Accent**: Púrpura (#8b5cf6)
+- **Dark**: Tema oscuro personalizado
+
+### Framer Motion
+Todas las animaciones están preparadas con:
+- Variantes predefinidas
+- Scroll triggers
+- Hover effects
+- Transiciones suaves
+
+## 🔧 Scripts Disponibles
+
+```bash
+# Desarrollo
+npm run dev          # Inicia servidor local
+
+# Producción
+npm run build        # Compila el proyecto
+npm run start        # Ejecuta versión compilada
+
+# Linting
+npm run lint         # Ejecuta ESLint
+```
+
+## 📝 Personalización
+
+### Cambiar Información Personal
+Edita los datos en cada componente:
+- `HeroSection.jsx` - Información principal
+- `AboutSection.jsx` - Sobre ti
+- `SkillsSection.jsx` - Tecnologías
+- `ProjectsSection.jsx` - Proyectos
+- `ContactSection.jsx` - Contacto
+
+### Agregar Proyectos
+Modifica el array `projectsData` en `src/components/sections/ProjectsSection.jsx`
+
+### Personalizar Colores
+Modifica `tailwind.config.js` en la sección `theme.extend.colors`
+
+## 🌐 Deploy
+
+### Vercel (Recomendado)
+```bash
+npm install -g vercel
+vercel
+```
+
+### Netlify
+Conecta tu repositorio y configura:
+- Build command: `npm run build`
+- Publish directory: `.next`
+
+### Otras plataformas
+Sigue la documentación de Next.js para deployment: https://nextjs.org/docs/deployment
+
+## 📧 Contacto
+
+- **Email**: [Tu email aquí]
+- **GitHub**: [Tu perfil aquí]
+- **LinkedIn**: [Tu perfil aquí]
+
+## 📄 Licencia
+
+MIT License - Libre para usar y modificar
+
+## 🙏 Créditos
+
+Diseño y desarrollo: Esteban David Lopez Nuñez
+Inspiración en tendencias modernas de web design
+
+---
+
+**Construido con ❤️ usando Next.js y Framer Motion**
